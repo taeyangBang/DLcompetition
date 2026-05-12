@@ -57,5 +57,18 @@
 ## 1. TabNet
 <img width="592" height="342" alt="image" src="https://github.com/user-attachments/assets/2c30b20d-8bb3-41cc-bd5e-96d1829e7959" />
 
+- TabNet 모델의 가장 큰 성과는 데이터 비율이 가장 적었던(약 17,000건) 'Good' 클래스의 재현율(Recall)을 무려 0.90까지 끌어올렸다는 점입니다. 이는 실제 우량 고객 10명 중 9명을 놓치지 않고 정확히 식별해 냈음을 의미합니다.
+- 아쉬운 점: Train Accuracy(0.89)와 Test Accuracy(0.81) 사이의 격차가 존재하여 다소 과적합(Overfitting) 경향이 있으며, 'Good' 클래스의 정밀도(Precision)가 0.71로 상대적으로 낮아 다수 클래스(Standard)를 Good으로 오인하는 경우(False Positive)가 일부 발생했습니다.
+
 ## 2. TabTransformer 
 <img width="581" height="298" alt="image" src="https://github.com/user-attachments/assets/0f8fcdd0-8fb7-45e1-8d33-57a31f0c3322" />
+
+- 상세 분석: TabTransformer는 TabNet과 전체 정확도는 비슷하지만, 클래스 간의 균형 잡힌 예측력을 보여주었습니다. 'Good' 클래스의 정밀도(Precision)가 0.74로 상승했고, 'Standard' 클래스의 재현율 역시 0.76에서 0.78로 개선되었습니다.
+- 기술적 원인: 자연어 처리의 트랜스포머(Transformer) 아키텍처를 차용하여, 범주형 변수 간의 복잡하고 다차원적인 상호작용(Interaction)을 깊이 있게 학습함으로써 특정 클래스에 과도하게 편향되지 않고 안정적인 분류 경계를 형성했습니다.
+
+# 비즈니스 관점의 모델 활용 전략
+1. VIP 타겟 마케팅 및 고객 유치 목적 ➔ TabNet 채택
+- 마케팅 캠페인에서는 단 한 명의 잠재적 우량 고객(Good)도 놓치지 않는 것이 중요합니다. 오분류된 고객에게 혜택이 조금 더 가더라도, 진짜 우량 고객 90%를 확보할 수 있는 TabNet이 공격적인 비즈니스 확장에 유리합니다.
+
+2. 리스크 관리 및 보수적인 대출 심사 목적 ➔ TabTransformer 채택
+- 대출 심사에서는 일반 고객(Standard)을 우량 고객(Good)으로 잘못 판단(False Positive)하여 금리 우대를 해주면 회사의 재무적 손실로 이어집니다. 따라서 정밀도(Precision)가 더 높고 오판율이 적어 밸런스가 좋은 TabTransformer가 리스크를 방어하는 데 적합합니다.
