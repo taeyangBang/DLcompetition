@@ -57,7 +57,7 @@
 ## 1. TabNet
 <img width="592" height="342" alt="image" src="https://github.com/user-attachments/assets/2c30b20d-8bb3-41cc-bd5e-96d1829e7959" />
 
-- TabNet 모델의 가장 큰 성과는 데이터 비율이 가장 적었던(약 17,000건) 'Good' 클래스의 재현율(Recall)을 무려 0.90까지 끌어올렸다는 점입니다. 이는 실제 우량 고객 10명 중 9명을 놓치지 않고 정확히 식별해 냈음을 의미합니다.
+- 상세 분석: TabNet 모델의 가장 큰 성과는 데이터 비율이 가장 적었던(약 17,000건) 'Good' 클래스의 재현율(Recall)을 무려 0.90까지 끌어올렸다는 점입니다. 이는 실제 우량 고객 10명 중 9명을 놓치지 않고 정확히 식별해 냈음을 의미합니다.
 - 아쉬운 점: Train Accuracy(0.89)와 Test Accuracy(0.81) 사이의 격차가 존재하여 다소 과적합(Overfitting) 경향이 있으며, 'Good' 클래스의 정밀도(Precision)가 0.71로 상대적으로 낮아 다수 클래스(Standard)를 Good으로 오인하는 경우(False Positive)가 일부 발생했습니다.
 
 ## 2. TabTransformer 
