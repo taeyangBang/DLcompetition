@@ -44,17 +44,18 @@
 <img width="1590" height="989" alt="image" src="https://github.com/user-attachments/assets/44fb88c5-caa4-4daf-ac5e-8e04bad9f5f5" />
 
 - DTI_Ratio (소득 대비 부채 비율)
-- 0(Good)등급은 바닥에 붙어있고, 1(Poor)등급은 박스가 가장 위에 있다.
-
-  
+<br>0(Good)등급은 바닥에 붙어있고, 1(Poor)등급은 박스가 가장 위에 있다.
 - EMI_to_Income_Ratio (월 소득 대비 고정지출 비중)
-- 1(Poor)등급의 고객들은 나머지 두 고객들에 비해 월급 대비 고정지출이 높다. -> 당장 사용할 현금이 부족하다.
-
-  
+<br>1(Poor)등급의 고객들은 나머지 두 고객들에 비해 월급 대비 고정지출이 높다. -> 당장 사용할 현금이 부족하다.
 - Financial_Reserve (잉여 금융 자산)
-- 0(Good)등급의 고객들이 통잔 잔고, 투자금을 합친 '여윳돈'이 높다. 하지만 2(Standard)등급의 고객들과 큰 차이는 없어보인다.
-
-  
+<br>0(Good)등급의 고객들이 통잔 잔고, 투자금을 합친 '여윳돈'이 높다. 하지만 2(Standard)등급의 고객들과 큰 차이는 없어보인다.
 - Delay_Score (종합 연체 위험 지수)
-- 0(Good)등급의 고객들은 바닥에 붙어있는 반면, 1(Poor)등급의 고객의 경우 박스 자체가 매우 넓고 높게 분포되어 있다.
-- 위험 및 불량 고객을 솎아내는데 중요한 역할을 할 것임을 보여준다.
+<br>0(Good)등급의 고객들은 바닥에 붙어있는 반면, 1(Poor)등급의 고객의 경우 박스 자체가 매우 넓고 높게 분포되어 있다.
+<br>위험 및 불량 고객을 솎아내는데 중요한 역할을 할 것임을 보여준다.
+
+# 모델링
+## 1. TabNet
+<img width="592" height="342" alt="image" src="https://github.com/user-attachments/assets/2c30b20d-8bb3-41cc-bd5e-96d1829e7959" />
+
+## 2. TabTransformer 
+<img width="581" height="298" alt="image" src="https://github.com/user-attachments/assets/0f8fcdd0-8fb7-45e1-8d33-57a31f0c3322" />
